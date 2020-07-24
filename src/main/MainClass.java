@@ -13,7 +13,7 @@ public class MainClass {
 		boolean tf = true;
 
 		for (;;) {
-			System.out.println("1. 회원가입");
+			System.out.println("\n 1. 회원가입");
 			System.out.println("2. 회원보기");
 			System.out.print("3. 종료하기 >>");
 			int i = sc.nextInt();
@@ -60,7 +60,7 @@ public class MainClass {
 				}
 				
 			} else if (i == 2) {
-				System.out.println("< 회원 정보 >");
+				System.out.println("\n< 회원 정보 >");
 				UserDAO.select();
 			} else if (i == 3) {
 				System.out.println("종료합니다.");
