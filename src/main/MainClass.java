@@ -50,11 +50,12 @@ public class MainClass {
 					sb.insert(8,"-");
 					phone = sb.toString();			
 				}
-				dto.setPw(phone);
+				dto.setPhone(phone);
 				
 				System.out.print("확인하시겠습니까? (y,n) >> ");
 				String ok = sc.next();
-				if(ok == "y") {
+				if(ok.equals("y")) {
+					System.out.println("입력 디버깅");
 					UserDAO.insert(dto);					
 				}
 				

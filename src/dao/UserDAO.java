@@ -114,7 +114,7 @@ public class UserDAO {
 
 			conn = DB.conn();
 
-			String sql = "INSERT INTO signup_tb ( id, pw, name, email, phone) ALUES ( ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO signup_tb ( id, pw, name, email, phone) VALUES ( ?, ?, ?, ?, ?)";
 
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
