@@ -42,8 +42,18 @@ public class MainClass {
 				sub.doinsert(dto);
 				
 			} else if (i == 2) {
-				System.out.println("\n< 회원 정보 >");
-				UserDAO.select();
+				System.out.println("\n1. 전체보기");
+				System.out.print("2. 회원번호로 보기 >>");
+				int j = sc.nextInt();
+				if(j==1) {
+					System.out.println("\n< 회원 정보 >");
+					UserDAO.select();					
+				}else if(j==2) {
+					System.out.println("\n회원번호 >> ");
+					int num = sc.nextInt();
+					System.out.println("\n< 회원 정보 >");
+					UserDAO.unum_select(num);
+				}
 			} else if (i == 3) {
 				System.out.println("종료합니다.");
 				break;
